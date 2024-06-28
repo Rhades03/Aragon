@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ficha>
+    <nombre></nombre>
+    <raza></raza>
+    <oficio></oficio>
+    <oficioPaterno></oficioPaterno>
+    <clase></clase>
+    <sexo></sexo>
+    <estadisticas>
+        <cuerpo></cuerpo>
+        <espiritu></espiritu>
+        <mente></mente>
+    </estadisticas>
+    <subEstadisticas>
+        <fuerza></fuerza>
+        <destreza></destreza>
+        <resistencia></resistencia>
+        <resonancia></resonancia>
+        <empatia></empatia>
+        <presencia></presencia>
+        <disciplina></disciplina>
+        <inteligencia></inteligencia>
+        <percepcion></percepcion>
+        <fuerzaVoluntad></fuerzaVoluntad>
+        <intuicion></intuicion>
+    </subEstadisticas>
+    <habilidades>
+    </habilidades>
+    <rasgos></rasgos>
+    <armas></armas>
+    <magia></magia>
+
+</ficha>

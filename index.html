@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fichas</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <input type="file" id="fileInput">
+  <div id="todo">
+
+
+    <div id="output">
+      <label>Nombre: <input type="text" id="nombre"></label>
+      <label>Raza: <input type="text" id="raza"></label>
+      <label>Oficio: <input type="text" id="oficio"></label>
+      <label>Oficio Paterno: <input type="text" id="oficioP"></label>
+      <label>Clase: <input type="text" id="clase"></label>
+      <select id="sexo" name="sexo">
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+        <option value="otro">Otro (me falta afecto paterno)</option>
+      </select>
+      
+
+      <div class="flex-container">
+        <div>
+          <div class="DivSuerte">
+          <Span>Suerte:</Span>
+          <span id="suerte"></span>
+        </div>
+        <fieldset class="EstadisticasPrimarias">
+          <legend>EstadisticasPrimarias</legend>
+          <label>Cuerpo: <br><input type="text" id="cuerpo" class="StatsBase"></label><br>
+          <label>Espiritu: <br><input type="text" id="espiritu" class="StatsBase"></label><br>
+          <label>Mente: <br><input type="text" id="mente" class="StatsBase"></label><br>
+        </fieldset>
+      </div>
+        <div class="StatsSecundarios">
+          <fieldset class="Cuerpo">
+            <legend>Cuerpo</legend>
+            <div class="miniCuerpo">
+              <label class="textoHabilidad">Fuerza <br><input type="text" id="fuerza" class="cuerpo"></label><br>
+            </div>
+            <div class="miniCuerpo">
+              <label class="textoHabilidad">Destreza <br><input type="text" id="destreza" class="cuerpo"></label><br>
+            </div>
+            <div class="miniCuerpo">
+              <label class="textoHabilidad">Resistencia <br><input type="text" id="resistencia" class="cuerpo"></label><br>
+            </div>
+            </fieldset>
+
+            <fieldset class="Espiritu">
+              <legend>Espiritu</legend>
+              <div class="miniEspiritu">
+                <label class="textoHabilidad">Resonancia <br><input type="text" id="resonancia" class="espiritu"></label><br>
+              </div>
+              <div class="miniEspiritu">
+                <label class="textoHabilidad">Empatía <br><input type="text" id="empatia" class="espiritu"></label><br>
+              </div>
+              <div class="miniEspiritu">
+                <label class="textoHabilidad">Presencia <br><input type="text" id="presencia" class="espiritu"></label><br>
+              </div>
+              <div class="miniEspiritu">
+                <label class="textoHabilidad">Disciplina <br><input type="text" id="disciplina" class="espiritu"></label><br>
+              </div>
+              </fieldset>
+
+              <fieldset class="Mente">
+                <legend>Mente</legend>
+                <div class="miniMente">
+                  <label class="textoHabilidad">Inteligencia <br><input type="text" id="inteligencia" class="mente"></label><br>
+                </div>
+                <div class="miniMente">
+                  <label class="textoHabilidad">Percepción <br><input type="text" id="percepcion" class="mente"></label><br>
+                </div>
+                <div class="miniMente">
+                  <label class="textoHabilidad">F.Voluntad <br><input type="text" id="fuerzaVoluntad" class="mente"></label><br>
+                </div>
+                <div class="miniMente">
+                  <label class="textoHabilidad">Intuición <br><input type="text" id="intuicion" class="mente"></label><br>
+                </div>
+                </fieldset>
+
+          <!--<fieldset>
+            <legend>Habilidades</legend>
+            <label class="salvacion-habilidades">Atletismo: <input type="checkbox" id="atletismo">
+              <span id="atletismoValor"></span> <button onclick="copiarTirada('atletismoValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Acrobacias: <input type="checkbox" id="acrobacias">
+              <span id="acrobaciasValor"></span> <button onclick="copiarTirada('acrobaciasValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Conocimiento Arcano: <input type="checkbox" id="cArcano">
+              <span id="cArcanoValor"></span> <button onclick="copiarTirada('cArcanoValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Historia: <input type="checkbox" id="historia">
+              <span id="historiaValor"></span> <button onclick="copiarTirada('historiaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Investigación: <input type="checkbox" id="investigacion">
+              <span id="investigacionValor"></span> <button onclick="copiarTirada('investigacionValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Naturaleza: <input type="checkbox" id="naturaleza">
+              <span id="naturalezaValor"></span> <button onclick="copiarTirada('naturalezaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Orientación: <input type="checkbox" id="orientacion">
+              <span id="orientacionValor"></span> <button onclick="copiarTirada('orientacionValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Percepción: <input type="checkbox" id="percepcion">
+              <span id="percepcionValor"></span> <button onclick="copiarTirada('percepcionValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Medicina: <input type="checkbox" id="medicina">
+              <span id="medicinaValor"></span> <button onclick="copiarTirada('medicinaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Perspicacia: <input type="checkbox" id="perspicacia">
+              <span id="perspicaciaValor"></span> <button onclick="copiarTirada('perspicaciaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Supervivencia: <input type="checkbox" id="supervivencia">
+              <span id="supervivenciaValor"></span> <button onclick="copiarTirada('supervivenciaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Engaño: <input type="checkbox" id="engano">
+              <span id="enganoValor"></span> <button onclick="copiarTirada('enganoValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Intimidación: <input type="checkbox" id="presencia">
+              <span id="presenciaValor"></span> <button onclick="copiarTirada('presenciaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Interpretación: <input type="checkbox" id="interpretacion">
+              <span id="interpretacionValor"></span> <button onclick="copiarTirada('interpretacionValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Persuasión: <input type="checkbox" id="persuasion">
+              <span id="persuasionValor"></span> <button onclick="copiarTirada('perspicaciaValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Juego De Manos: <input type="checkbox" id="juegoDeManos">
+              <span id="juegoDeManosValor"></span> <button onclick="copiarTirada('juegoDeManosValor')">Rol</button>
+            </label>
+            <label class="salvacion-habilidades">Trabajos Forzados: <input type="checkbox" id="trabajosForzados">
+              <span id="trabajosForzadosValor"></span> <button
+                onclick="copiarTirada('trabajosForzadosValor')">Rol</button>
+            </label>
+          </fieldset>
+
+          <fieldset class="dotes">
+            <legend>Dotes</legend>
+            <select id="dotes1" name="dotes1">
+              <option value=""></option>
+              <option value="Afotunado">Afotunado</option>
+              <option value="Duro">Duro</option>
+              <option value="Afortunado :/">Afortunado :/</option>
+              <option value="Alerta">Alerta</option>
+            </select>
+            <select id="dotes2" name="dotes2">
+              <option value=""></option>
+              <option value="Afotunado">Afotunado</option>
+              <option value="Duro">Duro</option>
+              <option value="Afortunado :/">Afortunado :/</option>
+              <option value="Alerta">Alerta</option>
+            </select>
+            <select id="dotes3" name="dotes3">
+              <option value=""></option>
+              <option value="Afotunado">Afotunado</option>
+              <option value="Duro">Duro</option>
+              <option value="Afortunado :/">Afortunado :/</option>
+              <option value="Alerta">Alerta</option>
+            </select>
+            <select id="dotes4" name="dotes4">
+              <option value=""></option>
+              <option value="Afotunado">Afotunado</option>
+              <option value="Duro">Duro</option>
+              <option value="Afortunado :/">Afortunado :/</option>
+              <option value="Alerta">Alerta</option>
+            </select>
+            <select id="dotes5" name="dotes5">
+              <option value=""></option>
+              <option value="Afotunado">Afotunado</option>
+              <option value="Duro">Duro</option>
+              <option value="Afortunado :/">Afortunado :/</option>
+              <option value="Alerta">Alerta</option>
+            </select>
+          </fieldset> -->
+        </div>
+        <div>
+        <fieldset id="habilidades">
+          <legend>Habilidades</legend>
+        </fieldset>
+
+        <fieldset id="crearHabilidades">
+          <legend>Crea tu habilidad:</legend>
+        <form action="" method="post" onsubmit="crearHabilidad(); return false;">
+          <label for="nombre">Nombre de la habilidad:</label>
+          <input type="text" id="nombreForm" name="nombre" required/><br />
+          <label for="efecto">Efecto de la habilidad:</label>
+          <input type="text" id="efectoForm" name="efecto" required/><br />
+          <label for="daño">Daño de la habilidad:</label>
+          <input type="text" id="dañoForm" name="daño" /><br />
+          <label for="coste">Coste de la habilidad:</label>
+          <input type="text" id="costeForm" name="coste" required/><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </fieldset>
+    </div>
+    <div class="otros">
+    <div class="urFatherandUrFather">
+      <span>Rasgos:</span><br>
+      <textarea name="rasgos" id="rasgos" class="textareaOtros"></textarea>
+    </div>
+    <div class="urFatherandUrFather">
+      <span>Armas y Armaduras:</span><br>
+      <textarea name="armas" id="armas" class="textareaOtros"></textarea>
+    </div>
+  </div>
+      </div>
+    </div>
+    
+    
+
+    <button onclick="guardarXML()">Guardar XML</button>
+
+    <script src="./index.js"></script>
+  </div>
+  <div class="urFatherandUrFather">
+    <span>Magia:</span><br>
+    <textarea name="magia" id="magia" class="textareaOtros"></textarea>
+  </div>
+</body>
+
+</html>
